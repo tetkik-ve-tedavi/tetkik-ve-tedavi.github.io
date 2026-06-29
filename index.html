@@ -5,26 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tetkik ve tedavi</title>
     <style>
-        body { background: #0a0a0a; color: #bcbcbc; font-family: monospace; padding: 3rem 2rem; max-width: 650px; margin: 0 auto; line-height: 1.7; }
-        h1 { font-size: 1.3rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2.5rem; color: #ffffff; font-weight: normal; }
-        a { color: #666; text-decoration: none; border-bottom: 1px dotted #666; }
-        a:hover { color: #fff; border-bottom: 1px solid #fff; }
-        .manifesto { margin-bottom: 4rem; }
-        .media-block { margin: 2rem 0; background: #111; padding: 1rem; border: 1px solid #1a1a1a; }
-        .contact { margin-top: 4rem; font-size: 0.9rem; color: #555; }
+        /* Base Stark Aesthetic */
+        body { 
+            background: #000000; 
+            color: #888888; 
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; 
+            padding: 4rem 2rem; 
+            max-width: 750px; 
+            margin: 0 auto; 
+            line-height: 1.6; 
+            letter-spacing: -0.02em;
+        }
+
+        /* Typography */
+        h1 { 
+            font-size: 1.1rem; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            margin-bottom: 0.2rem; 
+            color: #ffffff; 
+            font-weight: normal; 
+        }
+        
+        .meta { 
+            font-size: 0.8rem; 
+            color: #444444; 
+            margin-bottom: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+            border-bottom: 1px solid #111;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Dossier Grid Layout */
+        .grid-row { 
+            display: grid; 
+            grid-template-columns: 60px 100px 1fr; 
+            margin-bottom: 0.8rem; 
+            font-size: 0.9rem; 
+        }
+        
+        .year { 
+            color: #444444; 
+        }
+        
+        .format { 
+            color: #666666; 
+            text-transform: uppercase; 
+            font-size: 0.75rem; 
+            letter-spacing: 1px;
+            padding-top: 0.1rem;
+        }
+        
+        .work { 
+            color: #cccccc; 
+        }
+        
+        .work em { 
+            color: #ffffff; 
+            font-style: normal; 
+        }
+
+        /* Links */
+        a { 
+            color: #666666; 
+            text-decoration: none; 
+            transition: color 0.2s ease;
+        }
+        a:hover { 
+            color: #ffffff; 
+        }
+
+        .contact-block {
+            margin-top: 5rem;
+            font-size: 0.85rem;
+            color: #444444;
+        }
+
+        /* Responsive tweak for mobile screens */
+        @media (max-width: 500px) {
+            .grid-row {
+                grid-template-columns: 1fr;
+                gap: 0.2rem;
+                margin-bottom: 1.5rem;
+            }
+            body { padding: 2rem 1rem; }
+        }
     </style>
 </head>
 <body>
+
     <h1>tetkik ve tedavi</h1>
-    <div class="manifesto">
-        <p>An exploratory electronic project focused on unstable hardware sequencing, glitch aesthetics, and structural drift.</p>
+    <div class="meta">Istanbul, TR // Sound Design & Experimental Electronics</div>
+
+    <p style="color: #aaaaaa; font-size: 0.95rem; max-width: 600px; margin-bottom: 3rem;">
+        An exploratory electronic project focused on ambient drift, hardware sequencing limitations, and structural instability.
+    </p>
+
+    <h2>Index of Works</h2>
+
+    <!-- 2026 -->
+    <div class="grid-row">
+        <div class="year">2026</div>
+        <div class="format">Score</div>
+        <div class="work">Original music (<em>"Circling"</em>, <em>"Here but not Here"</em>) for <em>A Visit</em> — Short film by Mariam Abouzaid</div>
     </div>
-    <div class="media-block">
-        <!-- When ready, paste your Bandcamp, SoundCloud, or YouTube embed code here -->
-        [Audio / Video Portfolio Pending]
+
+    <!-- 2025 -->
+    <div class="grid-row">
+        <div class="year">2025</div>
+        <div class="format">LP</div>
+        <div class="work"><em>Bluster</em> — Released via Naviar Records</div>
     </div>
-    <div class="contact">
-        Inquiries / Bookings: <a href="mailto:your-email@domain.com">your-email@domain.com</a>
+    <div class="grid-row">
+        <div class="year">2025</div>
+        <div class="format">Comp</div>
+        <div class="work">"White Metal" on <em>11 Years of haiku</em> — Naviar Records</div>
     </div>
+    <div class="grid-row">
+        <div class="year">2025</div>
+        <div class="format">Comp</div>
+        <div class="work">"The Fall of the Red Dragonfly" on <em>Naviar Haiku 30</em> — Naviar Records</div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="grid-row">
+        <div class="year">2024</div>
+        <div class="format">Comp</div>
+        <div class="work">"A Slow Ride for the Shooter" on <em>24 Hours of Drone</em> — Sounds for the Soul Records</div>
+    </div>
+    <div class="grid-row">
+        <div class="year">2024</div>
+        <div class="format">Comp</div>
+        <div class="work">"Cascader" on <em>Naviar Haiku 27</em> — Naviar Records</div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="grid-row">
+        <div class="year">2023</div>
+        <div class="format">Comp</div>
+        <div class="work">"Skytalk" on <em>9 Years of Naviar Haiku</em> — Naviar Records</div>
+    </div>
+    <div class="grid-row">
+        <div class="year">2023</div>
+        <div class="format">Comp</div>
+        <div class="work">"Conglomerate" on <em>Communal Music Vol. 13</em> — AEMC Records</div>
+    </div>
+
+    <!-- 2022 -->
+    <div class="grid-row">
+        <div class="year">2022</div>
+        <div class="format">EP</div>
+        <div class="work"><em>Branches</em> — Self-released</div>
+    </div>
+    <div class="grid-row">
+        <div class="year">2022</div>
+        <div class="format">Comp</div>
+        <div class="work">"The Reed Sparrow Sings" on <em>Naviar Haiku 25</em> — Naviar Records</div>
+    </div>
+    <div class="grid-row">
+        <div class="year">2022</div>
+        <div class="format">Comp</div>
+        <div class="work">"Nobody is Ever Happy" on <em>For Peace. Against War. Who is Not?</em> — Component Recordings</div>
+    </div>
+
+    <!-- 2020 -->
+    <div class="grid-row">
+        <div class="year">2020</div>
+        <div class="format">LP</div>
+        <div class="work"><em>Refuge</em> — Self-released</div>
+    </div>
+
+    <div class="contact-block">
+        Inquiries / Archives / Bookings:<br>
+        <a href="mailto:tetkik.ve.tedavi@gmail.com">tetkik.ve.tedavi@gmail.com</a>
+    </div>
+
 </body>
 </html>
