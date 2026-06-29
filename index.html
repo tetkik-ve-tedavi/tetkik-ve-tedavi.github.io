@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tetkik ve tedavi</title>
     <style>
-        /* Base Stark Aesthetic */
+        /* Base Stark Industrial Aesthetic */
         body { 
             background: #000000; 
-            color: #888888; 
+            color: #dddddd; /* Brightened from gray to crisp off-white for high readability */
             font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; 
             padding: 4rem 2rem; 
             max-width: 750px; 
@@ -23,8 +23,6 @@
             height: auto;
             display: block;
             margin-bottom: 2rem;
-            
-            /* Your invert trick applied safely to just this class */
             filter: invert(100%); 
         }
         
@@ -34,13 +32,13 @@
             letter-spacing: 2px; 
             text-transform: uppercase; 
             margin-bottom: 0.2rem; 
-            color: #ffffff; 
+            color: #ffcc00; /* Industrial Yellow Accent */
             font-weight: normal; 
         }
         
         .meta { 
             font-size: 0.8rem; 
-            color: #444444; 
+            color: #666666; /* Sharpened contrast for meta text */
             margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -54,7 +52,7 @@
             align-items: center;
         }
         .streaming-links a {
-            color: #444444;
+            color: #555555;
             display: inline-flex;
             align-items: center;
             border-bottom: none;
@@ -66,18 +64,18 @@
             transition: color 0.2s ease;
         }
         .streaming-links a:hover svg {
-            color: #ffffff;
+            color: #ffcc00; /* Icons illuminate yellow on hover */
         }
 
         h2 {
             font-size: 0.9rem;
-            color: #ffffff;
+            color: #ffcc00; /* Industrial Yellow Accent */
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 3rem;
             margin-bottom: 1.5rem;
             font-weight: normal;
-            border-bottom: 1px solid #111;
+            border-bottom: 1px solid #222;
             padding-bottom: 0.5rem;
         }
 
@@ -90,11 +88,11 @@
         }
         
         .year { 
-            color: #444444; 
+            color: #555555; 
         }
         
         .format { 
-            color: #666666; 
+            color: #777777; 
             text-transform: uppercase; 
             font-size: 0.75rem; 
             letter-spacing: 1px;
@@ -102,18 +100,21 @@
         }
         
         .work { 
-            color: #cccccc; 
+            color: #dddddd; 
         }
         
+        /* Unified Track/Album Typography - Replaces Quotes with Yellow Focus */
         .work em { 
+            color: #ffcc00; 
             font-style: normal; 
+            font-weight: normal;
         }
 
         /* Content Links */
         a { 
-            color: #cccccc; 
+            color: #ffcc00; 
             text-decoration: none; 
-            border-bottom: 1px dotted #333;
+            border-bottom: 1px dotted #554400;
             transition: all 0.2s ease;
         }
         a:hover { 
@@ -121,18 +122,26 @@
             border-bottom: 1px solid #ffffff;
         }
         
-        /* Muted links for compilation albums to differentiate from tracks */
-        .comp-link {
-            color: #888888;
+        /* Muted yellow-gold for compilation titles to distinguish them from your tracks */
+        .comp-link em {
+            color: #bfa226 !important;
         }
-        .comp-link:hover {
-            color: #ffffff;
+        .comp-link:hover em {
+            color: #ffffff !important;
         }
 
         .contact-block {
             margin-top: 5rem;
             font-size: 0.85rem;
-            color: #444444;
+            color: #555555;
+        }
+        .contact-block a {
+            color: #888888;
+            border-bottom: 1px dotted #333;
+        }
+        .contact-block a:hover {
+            color: #ffcc00;
+            border-bottom: 1px solid #ffcc00;
         }
 
         /* Responsive tweak for mobile screens */
@@ -185,7 +194,7 @@
     <div class="grid-row">
         <div class="year">2026</div>
         <div class="format">Score</div>
-        <div class="work">Original music (<em>"Circling"</em>, <em>"Here but not Here"</em>) for <em>A Visit</em> — Short film by Mariam Abouzaid</div>
+        <div class="work">Original music (<em>Circling</em>, <em>Here but not Here</em>) for <em>A Visit</em> — Short film by Mariam Abouzaid</div>
     </div>
 
     <!-- 2025 -->
@@ -197,36 +206,36 @@
     <div class="grid-row">
         <div class="year">2025</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-white-metal-naviarhaiku551" target="_blank" rel="noopener noreferrer">"White Metal"</a> on <a href="https://naviarrecords.bandcamp.com/album/11-years-of-haiku" target="_blank" rel="noopener noreferrer" class="comp-link"><em>11 Years of haiku</em></a> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-white-metal-naviarhaiku551" target="_blank" rel="noopener noreferrer"><em>White Metal</em></a> on <a href="https://naviarrecords.bandcamp.com/album/11-years-of-haiku" target="_blank" rel="noopener noreferrer" class="comp-link"><em>11 Years of haiku</em></a> — Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2025</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-the-fall-of-the-red-dragonfly-naviarhaiku614" target="_blank" rel="noopener noreferrer">"The Fall of the Red Dragonfly"</a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-30" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 30</em></a> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-the-fall-of-the-red-dragonfly-naviarhaiku614" target="_blank" rel="noopener noreferrer"><em>The Fall of the Red Dragonfly</em></a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-30" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 30</em></a> — Naviar Records</div>
     </div>
 
     <!-- 2024 -->
     <div class="grid-row">
         <div class="year">2024</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://soundsforthesoul.bandcamp.com/track/tetkik-ve-tedavi-a-slow-ride-for-the-shooter" target="_blank" rel="noopener noreferrer">"A Slow Ride for the Shooter"</a> on <a href="https://soundsforthesoul.bandcamp.com/album/24-hours-of-drone" target="_blank" rel="noopener noreferrer" class="comp-link"><em>24 Hours of Drone</em></a> — Sounds for the Soul Records</div>
+        <div class="work"><a href="https://soundsforthesoul.bandcamp.com/track/tetkik-ve-tedavi-a-slow-ride-for-the-shooter" target="_blank" rel="noopener noreferrer"><em>A Slow Ride for the Shooter</em></a> on <a href="https://soundsforthesoul.bandcamp.com/album/24-hours-of-drone" target="_blank" rel="noopener noreferrer" class="comp-link"><em>24 Hours of Drone</em></a> — Sounds for the Soul Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2024</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-cascader-naviarhaiku558" target="_blank" rel="noopener noreferrer">"Cascader"</a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-27" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 27</em></a> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-cascader-naviarhaiku558" target="_blank" rel="noopener noreferrer"><em>Cascader</em></a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-27" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 27</em></a> — Naviar Records</div>
     </div>
 
     <!-- 2023 -->
     <div class="grid-row">
         <div class="year">2023</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-skytalk-naviarhaiku436" target="_blank" rel="noopener noreferrer">"Skytalk"</a> on <a href="https://naviarrecords.bandcamp.com/album/9-years-of-naviar-haiku" target="_blank" rel="noopener noreferrer" class="comp-link"><em>9 Years of Naviar Haiku</em></a> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-skytalk-naviarhaiku436" target="_blank" rel="noopener noreferrer"><em>Skytalk</em></a> on <a href="https://naviarrecords.bandcamp.com/album/9-years-of-naviar-haiku" target="_blank" rel="noopener noreferrer" class="comp-link"><em>9 Years of Naviar Haiku</em></a> — Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2023</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://aemc.bandcamp.com/track/conglomerate" target="_blank" rel="noopener noreferrer">"Conglomerate"</a> on <a href="https://aemc.bandcamp.com/album/communal-music-vol-13" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Communal Music Vol. 13</em></a> — AEMC Records</div>
+        <div class="work"><a href="https://aemc.bandcamp.com/track/conglomerate" target="_blank" rel="noopener noreferrer"><em>Conglomerate</em></a> on <a href="https://aemc.bandcamp.com/album/communal-music-vol-13" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Communal Music Vol. 13</em></a> — AEMC Records</div>
     </div>
 
     <!-- 2022 -->
@@ -238,12 +247,12 @@
     <div class="grid-row">
         <div class="year">2022</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-the-reed-sparrow-sings-naviarhaiku437" target="_blank" rel="noopener noreferrer">"The Reed Sparrow Sings"</a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-25" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 25</em></a> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-the-reed-sparrow-sings-naviarhaiku437" target="_blank" rel="noopener noreferrer"><em>The Reed Sparrow Sings</em></a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-25" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 25</em></a> — Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2022</div>
         <div class="format">Comp</div>
-        <div class="work"><a href="https://componentrecordings.bandcamp.com/track/nobody-is-ever-happy" target="_blank" rel="noopener noreferrer">"Nobody is Ever Happy"</a> on <a href="https://componentrecordings.bandcamp.com/album/for-peace-against-war-who-is-not-a-compilation-for-the-people-of-ukraine" target="_blank" rel="noopener noreferrer" class="comp-link"><em>For Peace. Against War. Who is Not?</em></a> — Component Recordings</div>
+        <div class="work"><a href="https://componentrecordings.bandcamp.com/track/nobody-is-ever-happy" target="_blank" rel="noopener noreferrer"><em>Nobody is Ever Happy</em></a> on <a href="https://componentrecordings.bandcamp.com/album/for-peace-against-war-who-is-not-a-compilation-for-the-people-of-ukraine" target="_blank" rel="noopener noreferrer" class="comp-link"><em>For Peace. Against War. Who is Not?</em></a> — Component Recordings</div>
     </div>
 
     <!-- 2020 -->
