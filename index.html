@@ -17,6 +17,15 @@
             letter-spacing: -0.02em;
         }
 
+        /* Artist Logo Style */
+        .artist-logo {
+            max-width: 140px;
+            height: auto;
+            display: block;
+            margin-bottom: 2rem;
+            filter: grayscale(100%) contrast(120%);
+        }
+
         /* Typography */
         h1 { 
             font-size: 1.1rem; 
@@ -30,9 +39,32 @@
         .meta { 
             font-size: 0.8rem; 
             color: #444444; 
-            margin-bottom: 4rem;
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+        }
+
+        /* Streaming Platforms Bar */
+        .streaming-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+            align-items: center;
+        }
+        .streaming-links a {
+            color: #444444;
+            display: inline-flex;
+            align-items: center;
+            border-bottom: none;
+        }
+        .streaming-links svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            transition: color 0.2s ease;
+        }
+        .streaming-links a:hover svg {
+            color: #ffffff;
         }
 
         h2 {
@@ -72,18 +104,27 @@
         }
         
         .work em { 
-            color: #ffffff; 
             font-style: normal; 
         }
 
-        /* Links */
+        /* Content Links */
         a { 
-            color: #666666; 
+            color: #cccccc; 
             text-decoration: none; 
-            transition: color 0.2s ease;
+            border-bottom: 1px dotted #333;
+            transition: all 0.2s ease;
         }
         a:hover { 
             color: #ffffff; 
+            border-bottom: 1px solid #ffffff;
+        }
+        
+        /* Muted links for compilation albums to differentiate from tracks */
+        .comp-link {
+            color: #888888;
+        }
+        .comp-link:hover {
+            color: #ffffff;
         }
 
         .contact-block {
@@ -100,16 +141,40 @@
                 margin-bottom: 1.5rem;
             }
             body { padding: 2rem 1rem; }
+            .streaming-links { gap: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Artist Logo Placeholder -->
+    <img src="logo.png" alt="tetkik ve tedavi logo" class="artist-logo" onerror="this.style.display='none';">
+
     <h1>tetkik ve tedavi</h1>
-    <div class="meta">Istanbul, TR // Sound Design & Experimental Electronics</div>
+    <div class="meta">Istanbul, TR // Ambient/Electronic/Experimental Music</div>
+
+    <!-- Streaming Platform Icons -->
+    <div class="streaming-links">
+        <!-- Bandcamp -->
+        <a href="https://tetkik-ve-tedavi.bandcamp.com/" target="_blank" rel="noopener noreferrer" title="Bandcamp">
+            <svg viewBox="0 0 24 24"><path d="M0 21h14.286L24 3H9.714L0 21z"/></svg>
+        </a>
+        <!-- Spotify -->
+        <a href="https://open.spotify.com/artist/0a2W4HJV5UutGMmzAnlz4b" target="_blank" rel="noopener noreferrer" title="Spotify">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12s5.373 12 12 12 12-5.372 12-12S18.627 0 12 0zm5.494 17.307c-.217.356-.684.47-1.04.253-2.863-1.748-6.467-2.145-10.712-1.176-.407.093-.815-.164-.908-.571-.093-.408.164-.816.571-.908 4.647-1.062 8.623-.615 11.836 1.344.356.218.47.684.253 1.058zm1.468-3.262c-.273.444-.855.587-1.3.313-3.277-2.013-8.273-2.597-12.148-1.42-.497.15-1.025-.13-1.176-.626-.15-.497.13-1.026.626-1.176 4.43-1.346 9.932-.7 13.687 1.61.444.273.587.855.313 1.3zm.126-3.41c-3.926-2.33-10.4-2.546-14.175-1.402-.602.183-1.24-.155-1.423-.757-.182-.603.156-1.24.757-1.422 4.337-1.317 11.49-1.07 16.015 1.614.542.322.72.1.398 1.56-.322.542-1.02.72-1.56.398z"/></svg>
+        </a>
+        <!-- SoundCloud -->
+        <a href="https://soundcloud.com/tetkik_ve_tedavi" target="_blank" rel="noopener noreferrer" title="SoundCloud">
+            <svg viewBox="0 0 24 24"><path d="M1 13.1c0-.4.3-.7.7-.7h.5c.4 0 .7.3.7.7v3.7c0 .4-.3.7-.7.7h-.5c-.4 0-.7-.3-.7-.7v-3.7zm2.4-1.2c0-.5.4-.9.9-.9s.9.4.9.9v4.9c0 .5-.4.9-.9.9s-.9-.4-.9-.9v-4.9zm2.7-1.7c0-.6.4-1 .9-1s1 .4 1 1v6.5c0 .6-.4 1-1 1s-.9-.4-.9-1v-6.5zm2.7 1.2c0-.6.4-1.1 1-1.1s1 .5 1 1.1v5.3c0 .6-.4 1.1-1 1.1s-1-.5-1-1.1v-5.3zm2.7-2.6c0-.7.6-1.3 1.3-1.3s1.3.6 1.3 1.3v8c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3v-8zm2.8-3.4c0-.5.4-.8.8-.8.3 0 .7.2.8.5l.3.8v10.9c0 .5-.4.8-.8.8s-.8-.4-.8-.8v-11.4zm2.7 3.6c.3-1.9 2-3.4 4.1-3.4 1.1 0 2.1.4 2.8 1.1.7-.3 1.5-.4 2.3-.1 1.6.5 2.6 2 2.6 3.7 0 .2 0 .4-.1.6 1 .7 1.6 1.9 1.6 3.2 0 2.2-1.8 4-4 4h-13.3v-13.1z"/></svg>
+        </a>
+        <!-- YouTube Music -->
+        <a href="https://music.youtube.com/channel/UCpQs5ln4Xyynv48INAib4eA" target="_blank" rel="noopener noreferrer" title="YouTube Music">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 17.5c-3.038 0-5.5-2.462-5.5-5.5s2.462-5.5 5.5-5.5 5.5 2.462 5.5 5.5-2.462 5.5-5.5 5.5zm0-9.2c-2.044 0-3.7 1.656-3.7 3.7s1.656 3.7 3.7 3.7 3.7-1.656 3.7-3.7-1.656-3.7-3.7-3.7zm-1.5 5.65v-3.9l3.4 1.95-3.4 1.95z"/></svg>
+        </a>
+    </div>
 
     <p style="color: #aaaaaa; font-size: 0.95rem; max-width: 600px; margin-bottom: 3rem;">
-        An exploratory electronic project focused on ambient drift, hardware sequencing limitations, and structural instability.
+        An experimental electronic project focused on ambient drift, hardware sequencing limitations, and structural instability.
     </p>
 
     <h2>Index of Works</h2>
@@ -125,65 +190,65 @@
     <div class="grid-row">
         <div class="year">2025</div>
         <div class="format">LP</div>
-        <div class="work"><em>Bluster</em> — Released via Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/album/bluster" target="_blank" rel="noopener noreferrer"><em>Bluster</em></a> — Released via Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2025</div>
         <div class="format">Comp</div>
-        <div class="work">"White Metal" on <em>11 Years of haiku</em> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-white-metal-naviarhaiku551" target="_blank" rel="noopener noreferrer">"White Metal"</a> on <a href="https://naviarrecords.bandcamp.com/album/11-years-of-haiku" target="_blank" rel="noopener noreferrer" class="comp-link"><em>11 Years of haiku</em></a> — Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2025</div>
         <div class="format">Comp</div>
-        <div class="work">"The Fall of the Red Dragonfly" on <em>Naviar Haiku 30</em> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-the-fall-of-the-red-dragonfly-naviarhaiku614" target="_blank" rel="noopener noreferrer">"The Fall of the Red Dragonfly"</a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-30" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 30</em></a> — Naviar Records</div>
     </div>
 
     <!-- 2024 -->
     <div class="grid-row">
         <div class="year">2024</div>
         <div class="format">Comp</div>
-        <div class="work">"A Slow Ride for the Shooter" on <em>24 Hours of Drone</em> — Sounds for the Soul Records</div>
+        <div class="work"><a href="https://soundsforthesoul.bandcamp.com/track/tetkik-ve-tedavi-a-slow-ride-for-the-shooter" target="_blank" rel="noopener noreferrer">"A Slow Ride for the Shooter"</a> on <a href="https://soundsforthesoul.bandcamp.com/album/24-hours-of-drone" target="_blank" rel="noopener noreferrer" class="comp-link"><em>24 Hours of Drone</em></a> — Sounds for the Soul Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2024</div>
         <div class="format">Comp</div>
-        <div class="work">"Cascader" on <em>Naviar Haiku 27</em> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-cascader-naviarhaiku558" target="_blank" rel="noopener noreferrer">"Cascader"</a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-27" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 27</em></a> — Naviar Records</div>
     </div>
 
     <!-- 2023 -->
     <div class="grid-row">
         <div class="year">2023</div>
         <div class="format">Comp</div>
-        <div class="work">"Skytalk" on <em>9 Years of Naviar Haiku</em> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-skytalk-naviarhaiku436" target="_blank" rel="noopener noreferrer">"Skytalk"</a> on <a href="https://naviarrecords.bandcamp.com/album/9-years-of-naviar-haiku" target="_blank" rel="noopener noreferrer" class="comp-link"><em>9 Years of Naviar Haiku</em></a> — Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2023</div>
         <div class="format">Comp</div>
-        <div class="work">"Conglomerate" on <em>Communal Music Vol. 13</em> — AEMC Records</div>
+        <div class="work"><a href="https://aemc.bandcamp.com/track/conglomerate" target="_blank" rel="noopener noreferrer">"Conglomerate"</a> on <a href="https://aemc.bandcamp.com/album/communal-music-vol-13" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Communal Music Vol. 13</em></a> — AEMC Records</div>
     </div>
 
     <!-- 2022 -->
     <div class="grid-row">
         <div class="year">2022</div>
         <div class="format">EP</div>
-        <div class="work"><em>Branches</em> — Self-released</div>
+        <div class="work"><a href="https://tetkik-ve-tedavi.bandcamp.com/album/branches" target="_blank" rel="noopener noreferrer"><em>Branches</em></a> — Self-released</div>
     </div>
     <div class="grid-row">
         <div class="year">2022</div>
         <div class="format">Comp</div>
-        <div class="work">"The Reed Sparrow Sings" on <em>Naviar Haiku 25</em> — Naviar Records</div>
+        <div class="work"><a href="https://naviarrecords.bandcamp.com/track/tetkik-ve-tedavi-the-reed-sparrow-sings-naviarhaiku437" target="_blank" rel="noopener noreferrer">"The Reed Sparrow Sings"</a> on <a href="https://naviarrecords.bandcamp.com/album/naviar-haiku-25" target="_blank" rel="noopener noreferrer" class="comp-link"><em>Naviar Haiku 25</em></a> — Naviar Records</div>
     </div>
     <div class="grid-row">
         <div class="year">2022</div>
         <div class="format">Comp</div>
-        <div class="work">"Nobody is Ever Happy" on <em>For Peace. Against War. Who is Not?</em> — Component Recordings</div>
+        <div class="work"><a href="https://componentrecordings.bandcamp.com/track/nobody-is-ever-happy" target="_blank" rel="noopener noreferrer">"Nobody is Ever Happy"</a> on <a href="https://componentrecordings.bandcamp.com/album/for-peace-against-war-who-is-not-a-compilation-for-the-people-of-ukraine" target="_blank" rel="noopener noreferrer" class="comp-link"><em>For Peace. Against War. Who is Not?</em></a> — Component Recordings</div>
     </div>
 
     <!-- 2020 -->
     <div class="grid-row">
         <div class="year">2020</div>
         <div class="format">LP</div>
-        <div class="work"><em>Refuge</em> — Self-released</div>
+        <div class="work"><a href="https://tetkik-ve-tedavi.bandcamp.com/album/refuge" target="_blank" rel="noopener noreferrer"><em>Refuge</em></a> — Self-released</div>
     </div>
 
     <div class="contact-block">
