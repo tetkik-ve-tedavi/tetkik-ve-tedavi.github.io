@@ -17,15 +17,18 @@
             letter-spacing: -0.02em;
         }
 
-        /* Artist Logo Style */
+        /* Artist Logo Style via SVG Stencil Masking */
         .artist-logo {
-            max-width: 140px;
-            height: auto;
-            display: block;
+            width: 140px;
+            height: 140px; /* Adjust if your logo is a wide rectangle rather than a square */
             margin-bottom: 2rem;
             
-            /* Transforms original black contours directly into industrial yellow (#ffcc00) */
-            filter: invert(81%) sepia(61%) saturate(3781%) hue-rotate(360deg) brightness(104%) contrast(104%);
+            /* The browser paints a block of your exact yellow font color */
+            background-color: #ffcc00; 
+            
+            /* Your vector file acts as a razor-sharp stencil cutting out the color */
+            -webkit-mask: url(logo.svg) no-repeat left center / contain;
+            mask: url(logo.svg) no-repeat left center / contain;
         }
         
         /* Typography */
@@ -159,10 +162,10 @@
     </style>
 </head>
 <body>
-
-    <!-- Artist Logo Placeholder -->
-    <img src="logo.png" alt="tetkik ve tedavi logo" class="artist-logo" onerror="this.style.display='none';">
-
+    
+    <!-- Artist Logo Stencil Container -->
+    <div class="artist-logo"></div>
+    
     <h1>tetkik ve tedavi</h1>
     <div class="meta">Istanbul, TR // Ambient/Electronic/Experimental Music</div>
 
