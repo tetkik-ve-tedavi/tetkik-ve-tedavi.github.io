@@ -23,9 +23,11 @@
             height: auto;
             display: block;
             margin-bottom: 2rem;
-            filter: grayscale(100%) contrast(120%);
+            
+            /* Your invert trick applied safely to just this class */
+            filter: invert(100%); 
         }
-
+        
         /* Typography */
         h1 { 
             font-size: 1.1rem; 
