@@ -23,7 +23,9 @@
             height: auto;
             display: block;
             margin-bottom: 2rem;
-            filter: invert(100%); 
+            
+            /* Transforms original black contours directly into industrial yellow (#ffcc00) */
+            filter: invert(81%) sepia(61%) saturate(3781%) hue-rotate(360deg) brightness(104%) contrast(104%);
         }
         
         /* Typography */
